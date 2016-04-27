@@ -1,10 +1,10 @@
 {
   "name": "chromedriver126",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "chromedriver 1.26",
-  "main": "index.js",
+  "main": "lib/chromedriver",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "node install.js"
   },
   "repository": {
     "type": "git",
@@ -13,12 +13,8 @@
   "keywords": [
     "chromedriver"
   ],
-  "main": "lib/chromedriver",
   "bin": {
     "chromedriver": "./bin/chromedriver"
-  },
-  "scripts": {
-    "install": "node install.js"
   },
   "author": "Steve Wang <swangful@gmail.com>",
   "license": "ISC",
