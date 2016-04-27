@@ -14,10 +14,22 @@ var url = require('url')
 var util = require('util')
 
 var libPath = path.join(__dirname, 'lib', 'chromedriver')
-var cdnUrl = process.env.npm_config_chromedriver_cdnurl || process.env.CHROMEDRIVER_CDNURL || 'http://chromedriver.googlecode.com/files/'
+var cdnUrl = process.env.npm_config_chromedriver_cdnurl || process.env.CHROMEDRIVER_CDNURL || 'http://chromedriver.googlecode.com/files'
 // adapt http://chromedriver.storage.googleapis.com/
 cdnUrl = cdnUrl.replace(/\/+$/, '')
 var downloadUrl = cdnUrl + '/chromedriver_linux64_26.0.1383.0.zip'
+var platform = process.platform
+
+if (platform === 'linux') {
+  if (process.arch === 'x64') {
+    platform += '64'
+  } else {
+    platform += '32'
+  }
+} else if (platform !== 'linux') {
+  console.log('Sorry, only works with linux:', process.platform, process.arch)
+  process.exit(1)
+}
 
 downloadUrl = util.format(downloadUrl, helper.version);
 
