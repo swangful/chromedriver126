@@ -1,6 +1,6 @@
 {
   "name": "chromedriver126",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "chromedriver 1.26",
   "main": "lib/chromedriver",
   "scripts": {
