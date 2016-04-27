@@ -1,3 +1,5 @@
+var colors = require('colors');
+
 exports.printMsg = function() {
-    console.log("hello world");
-}
+    console.log("Hello World!".red);
+};

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/swangful/chromedriver126/issues"
   },
-  "homepage": "https://github.com/swangful/chromedriver126"
+  "homepage": "https://github.com/swangful/chromedriver126",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
 }
