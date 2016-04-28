@@ -31,7 +31,7 @@ if (platform === 'linux') {
   process.exit(1)
 }
 
-downloadUrl = util.format(downloadUrl, helper.version, platform);
+downloadUrl = util.format(downloadUrl);
 
 var fileName = downloadUrl.split('/').pop()
 
