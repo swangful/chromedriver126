@@ -3,7 +3,7 @@
 var AdmZip = require('adm-zip')
 var cp = require('child_process')
 var fs = require('fs')
-var helper = require('./lib/chromedriver126')
+var helper = require('./lib/chromedriver')
 var http = require('http')
 var kew = require('kew')
 var npmconf = require('npmconf')
@@ -13,7 +13,7 @@ var rimraf = require('rimraf').sync
 var url = require('url')
 var util = require('util')
 
-var libPath = path.join(__dirname, 'lib', 'chromedriver126')
+var libPath = path.join(__dirname, 'lib', 'chromedriver')
 var cdnUrl = process.env.npm_config_chromedriver_cdnurl || process.env.CHROMEDRIVER_CDNURL || 'http://chromedriver.googlecode.com/files'
 // adapt http://chromedriver.storage.googleapis.com/
 cdnUrl = cdnUrl.replace(/\/+$/, '')

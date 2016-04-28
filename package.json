@@ -2,7 +2,7 @@
   "name": "chromedriver126",
   "version": "1.0.12",
   "description": "chromedriver 1.26",
-  "main": "lib/chromedriver126",
+  "main": "lib/chromedriver",
   "scripts": {
     "install": "node install.js"
   },
@@ -14,7 +14,7 @@
     "chromedriver"
   ],
   "bin": {
-    "chromedriver126": "./bin/chromedriver"
+    "chromedriver": "./bin/chromedriver"
   },
   "author": "Steve Wang <swangful@gmail.com>",
   "license": "ISC",
