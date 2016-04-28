@@ -31,9 +31,6 @@ if (platform === 'linux') {
   process.exit(1)
 }
 
-//[launcher] Error: Error: Could not find chromedriver at 
-///media/ephemeral0/jenkins-slave/workspace/dnbi-ui_review/node_modules/chromedriver/lib/chromedriver/chromedriver.exe
-
 downloadUrl = util.format(downloadUrl);
 
 var fileName = downloadUrl.split('/').pop()
@@ -85,7 +82,7 @@ function findSuitableTempDirectory(npmConf) {
   ]
 
   for (var i = 0; i < candidateTmpDirs.length; i++) {
-    var candidatePath = path.join(candidateTmpDirs[i], 'chromedriver126')
+    var candidatePath = path.join(candidateTmpDirs[i], 'chromedriver')
 
     try {
       mkdirp.sync(candidatePath, '0777')
