@@ -3,7 +3,7 @@
 var AdmZip = require('adm-zip')
 var cp = require('child_process')
 var fs = require('fs')
-var helper = require('./lib/chromedriver')
+var helper = require('./lib/chromedriver126')
 var http = require('http')
 var kew = require('kew')
 var npmconf = require('npmconf')
@@ -13,7 +13,7 @@ var rimraf = require('rimraf').sync
 var url = require('url')
 var util = require('util')
 
-var libPath = path.join(__dirname, 'lib', 'chromedriver')
+var libPath = path.join(__dirname, 'lib', 'chromedriver126')
 var cdnUrl = process.env.npm_config_chromedriver_cdnurl || process.env.CHROMEDRIVER_CDNURL || 'http://chromedriver.googlecode.com/files'
 // adapt http://chromedriver.storage.googleapis.com/
 cdnUrl = cdnUrl.replace(/\/+$/, '')
@@ -30,6 +30,9 @@ if (platform === 'linux') {
   console.log('Sorry, only works with linux:', process.platform, process.arch)
   process.exit(1)
 }
+
+//[launcher] Error: Error: Could not find chromedriver at 
+///media/ephemeral0/jenkins-slave/workspace/dnbi-ui_review/node_modules/chromedriver/lib/chromedriver/chromedriver.exe
 
 downloadUrl = util.format(downloadUrl);
 
@@ -82,7 +85,7 @@ function findSuitableTempDirectory(npmConf) {
   ]
 
   for (var i = 0; i < candidateTmpDirs.length; i++) {
-    var candidatePath = path.join(candidateTmpDirs[i], 'chromedriver')
+    var candidatePath = path.join(candidateTmpDirs[i], 'chromedriver126')
 
     try {
       mkdirp.sync(candidatePath, '0777')
