@@ -31,7 +31,7 @@ if (platform === 'linux') {
   process.exit(1)
 }
 
-downloadUrl = util.format(downloadUrl, helper.version);
+downloadUrl = util.format(downloadUrl, helper.version, platform);
 
 var fileName = downloadUrl.split('/').pop()
 
@@ -196,8 +196,6 @@ function copyIntoPlace(tmpPath, targetPath) {
 
   return kew.all(promises);
 }
-
-
 
 function fixFilePermissions() {
   // Check that the binary is user-executable and fix it if it isn't (problems with unzip library)
