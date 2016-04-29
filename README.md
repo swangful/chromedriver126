@@ -2,11 +2,14 @@
 
 **NPM package for chromedriver 1.26**
 
-To test "Hello World!" install chromedriver126 package via npm install.
+This is chromedriver version 1.26 for linux OS. 
+It is based off of the original chromedriver package which can be found [here](https://www.npmjs.com/package/chromedriver) 
+
+To install..
 
     $ npm install chromedriver126
 
-Make a file called test.js
+To test "Hello World!" 
 
     $ vim test.js
 
